@@ -73,7 +73,7 @@ Projeye katkıda bulunmak isterseniz, lütfen aşağıdaki adımları takip edin
 5. Orijinal repoda bir pull request açın.
 
 ## Lisans
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE.md dosyasına bakın.
 
 ## İletişim
 Herhangi bir soru veya öneriniz varsa, lütfen bana rmco3hub@gmail.com adresinden ulaşın veya GitHub üzerinden bir issue açın.
