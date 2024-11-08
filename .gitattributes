@@ -5,8 +5,8 @@
 
 ###############################################################################
 # Set default behavior for command prompt diff.
-#
-# This is need for earlier builds of msysgit that does not have it on by
+# 
+# This is needed for earlier builds of msysgit that do not have it on by
 # default for csharp files.
 # Note: This is only used by command line
 ###############################################################################
@@ -36,16 +36,23 @@
 #*.wwaproj   merge=binary
 
 ###############################################################################
-# behavior for image files
+# Behavior for binary files (such as .exe) in the Release folder
 #
-# image files are treated as binary by default.
+# Setting *.exe in bin/Release as binary to ensure it's handled correctly by Git.
+###############################################################################
+bin/Release/*.exe binary
+
+###############################################################################
+# Behavior for image files
+#
+# Image files are treated as binary by default.
 ###############################################################################
 #*.jpg   binary
 #*.png   binary
 #*.gif   binary
 
 ###############################################################################
-# diff behavior for common document formats
+# Diff behavior for common document formats
 # 
 # Convert binary document formats to text before diffing them. This feature
 # is only available from the command line. Turn it on by uncommenting the 
