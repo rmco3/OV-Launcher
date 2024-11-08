@@ -2363,6 +2363,7 @@ namespace OV_Launcher
             // 
             this.linkLabel15.AutoSize = true;
             this.linkLabel15.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.linkLabel15.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel15.LinkColor = System.Drawing.Color.RoyalBlue;
             this.linkLabel15.Location = new System.Drawing.Point(129, 187);
             this.linkLabel15.Name = "linkLabel15";
@@ -2376,6 +2377,7 @@ namespace OV_Launcher
             // 
             this.linkLabel12.AutoSize = true;
             this.linkLabel12.Font = new System.Drawing.Font("Comic Sans MS", 14.25F);
+            this.linkLabel12.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel12.LinkColor = System.Drawing.Color.RoyalBlue;
             this.linkLabel12.Location = new System.Drawing.Point(129, 161);
             this.linkLabel12.Name = "linkLabel12";
