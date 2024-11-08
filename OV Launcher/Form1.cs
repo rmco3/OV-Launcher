@@ -287,7 +287,6 @@ namespace OV_Launcher
 
             if (File.Exists(settingsFilePath3))
             {
-                // Eklenen oyunları göstermek için label6'da okuyabiliriz
                 label6.Text = File.ReadAllText(settingsFilePath3);
             }
 
