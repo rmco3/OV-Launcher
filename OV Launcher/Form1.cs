@@ -61,6 +61,7 @@ namespace OV_Launcher
 
         private static readonly string lastUpdateFilePath = "lastUpdate.txt";
         private static readonly string repoUrl = "https://api.github.com/repos/rmco3/OV-Launcher/commits";
+        private bool showUpdateNotifications = true;
 
         public Form1()
         {
@@ -84,7 +85,9 @@ namespace OV_Launcher
             SetPlaceholder(textBox11, "");
             SetPlaceholder(textBox12, "");
 
-
+            // Güncelleme bildirimleri ayarını yükle
+            showUpdateNotifications = Properties.Settings.Default.ShowUpdateNotifications;
+            checkBox2.Checked = showUpdateNotifications;
 
             // Diğer ayarlar
             LoadSettings();
@@ -126,7 +129,7 @@ namespace OV_Launcher
 
                 string previousCommitHash = File.Exists(lastUpdateFilePath) ? File.ReadAllText(lastUpdateFilePath) : string.Empty;
 
-                if (latestCommitHash != previousCommitHash)
+                if (latestCommitHash != previousCommitHash && showUpdateNotifications)
                 {
                     // En yeni commit bilgilerini al ve kullanıcıya göster
                     string message = commits[0]["commit"]["message"].ToString();
@@ -1614,6 +1617,13 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
             // Varsayılan tarayıcıda URL'yi aç
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            showUpdateNotifications = checkBox2.Checked;
+            Properties.Settings.Default.ShowUpdateNotifications = showUpdateNotifications;
+            Properties.Settings.Default.Save();
         }
     }
 }

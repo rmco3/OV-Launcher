@@ -219,11 +219,13 @@ namespace OV_Launcher
             this.label39 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.linkLabel15 = new System.Windows.Forms.LinkLabel();
             this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -248,8 +250,9 @@ namespace OV_Launcher
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label61 = new System.Windows.Forms.Label();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -324,6 +327,7 @@ namespace OV_Launcher
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.groupBox23.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage
@@ -1654,6 +1658,7 @@ namespace OV_Launcher
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.groupBox23);
             this.tabPage2.Controls.Add(this.btnResetToDefaults);
             this.tabPage2.Controls.Add(this.groupBox10);
             this.tabPage2.Controls.Add(this.groupBox9);
@@ -2325,6 +2330,16 @@ namespace OV_Launcher
             this.panel15.Size = new System.Drawing.Size(511, 387);
             this.panel15.TabIndex = 0;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Location = new System.Drawing.Point(113, 477);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(275, 18);
+            this.label23.TabIndex = 64;
+            this.label23.Text = "Bu proje MIT lisansı altında lisanslanmıştır. ";
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
@@ -2388,6 +2403,15 @@ namespace OV_Launcher
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(475, 185);
             this.panel17.TabIndex = 58;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(32, 229);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(377, 13);
+            this.label55.TabIndex = 64;
+            this.label55.Text = "Bu uygulamaya katkıda bulunduysanız, adınızı burada belirtmekten çekinmeyin.";
             // 
             // label63
             // 
@@ -2627,24 +2651,35 @@ namespace OV_Launcher
             this.linkLabel7.Size = new System.Drawing.Size(100, 23);
             this.linkLabel7.TabIndex = 59;
             // 
-            // label55
+            // groupBox23
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(32, 229);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(377, 13);
-            this.label55.TabIndex = 64;
-            this.label55.Text = "Bu uygulamaya katkıda bulunduysanız, adınızı burada belirtmekten çekinmeyin.";
+            this.groupBox23.Controls.Add(this.checkBox2);
+            this.groupBox23.Controls.Add(this.label61);
+            this.groupBox23.Location = new System.Drawing.Point(7, 137);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(183, 40);
+            this.groupBox23.TabIndex = 3;
+            this.groupBox23.TabStop = false;
             // 
-            // label23
+            // checkBox2
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(113, 477);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(275, 18);
-            this.label23.TabIndex = 64;
-            this.label23.Text = "Bu proje MIT lisansı altında lisanslanmıştır. ";
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(9, 19);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(169, 17);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "Güncelleme bildirimlerini göster";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(6, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(63, 13);
+            this.label61.TabIndex = 1;
+            this.label61.Text = "Güncelleme";
             // 
             // Form1
             // 
@@ -2786,6 +2821,8 @@ namespace OV_Launcher
             this.panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3011,6 +3048,9 @@ namespace OV_Launcher
         private Label label37;
         private Label label55;
         private Label label23;
+        private GroupBox groupBox23;
+        private CheckBox checkBox2;
+        private Label label61;
     }
 }
 

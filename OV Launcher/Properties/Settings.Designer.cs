@@ -182,12 +182,12 @@ namespace OV_Launcher.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool sendCrashReports {
+        public bool ShowUpdateNotifications {
             get {
-                return ((bool)(this["sendCrashReports"]));
+                return ((bool)(this["ShowUpdateNotifications"]));
             }
             set {
-                this["sendCrashReports"] = value;
+                this["ShowUpdateNotifications"] = value;
             }
         }
     }
