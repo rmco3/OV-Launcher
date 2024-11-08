@@ -2328,11 +2328,11 @@ namespace OV_Launcher
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(439, 202);
+            this.label37.Location = new System.Drawing.Point(393, 202);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(43, 13);
+            this.label37.Size = new System.Drawing.Size(89, 13);
             this.label37.TabIndex = 63;
-            this.label37.Text = "E-posta";
+            this.label37.Text = "E-posta adresimiz";
             // 
             // richTextBox1
             // 
@@ -2518,7 +2518,7 @@ namespace OV_Launcher
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(113, 26);
             this.label25.TabIndex = 46;
-            this.label25.Text = "Version: 1.3";
+            this.label25.Text = "Version: 1.4";
             // 
             // label56
             // 
@@ -2655,7 +2655,7 @@ namespace OV_Launcher
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "OV Launcher 1.3";
+            this.Text = "OV Launcher 1.4";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage.ResumeLayout(false);
