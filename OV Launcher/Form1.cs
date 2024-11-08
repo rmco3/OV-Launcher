@@ -55,7 +55,6 @@ namespace OV_Launcher
         private string settingsLabelPath12 = "labelName12.txt";
 
 
-
         // Diğer ayarlar
         private bool manualChange = false;
 
