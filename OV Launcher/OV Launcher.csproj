@@ -154,9 +154,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RarUygulamalari resim.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
@@ -181,11 +178,10 @@
   <ItemGroup>
     <Content Include="bv-logo-letter-monogram-slash-with-modern-logo-designs-template-vector-4222558324.ico" />
     <Content Include="OV Launcher logo.ico" />
-    <None Include="Resources\Başlıksız-Photoroom.png" />
-    <None Include="Resources\Remove-bg.ai_1725651944985.png" />
-    <None Include="Resources\KafeLogo-Photoroom.png" />
-    <None Include="Resources\images-Photoroom.png" />
     <Content Include="th-3457613026.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
