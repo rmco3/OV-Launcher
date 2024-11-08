@@ -4,7 +4,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-
+using Newtonsoft.Json.Linq;
+using System.Net.Http;
 
 namespace OV_Launcher
 {
@@ -58,9 +59,13 @@ namespace OV_Launcher
         // Diğer ayarlar
         private bool manualChange = false;
 
+        private static readonly string lastUpdateFilePath = "lastUpdate.txt";
+        private static readonly string repoUrl = "https://api.github.com/repos/rmco3/OV-Launcher/commits";
+
         public Form1()
         {
             InitializeComponent();
+            CheckForUpdates();
 
             Form1_Load(this, EventArgs.Empty); // Form yüklendiğinde Form1_Load metodu çağrılacak
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -105,6 +110,41 @@ namespace OV_Launcher
 
             // Yanlardan çekip büyütmeyi devre dışı bırak
             FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
+
+        private async void CheckForUpdates()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("User-Agent", "OV Launcher");
+
+                string responseBody = await client.GetStringAsync(repoUrl);
+                JArray commits = JArray.Parse(responseBody);
+
+                string latestCommitHash = commits[0]["sha"].ToString();
+
+                string previousCommitHash = File.Exists(lastUpdateFilePath) ? File.ReadAllText(lastUpdateFilePath) : string.Empty;
+
+                if (latestCommitHash != previousCommitHash)
+                {
+                    // En yeni commit bilgilerini al ve kullanıcıya göster
+                    string message = commits[0]["commit"]["message"].ToString();
+                    string author = commits[0]["commit"]["author"]["name"].ToString();
+                    string date = commits[0]["commit"]["author"]["date"].ToString();
+
+                    string updateDetails = $"Yeni Güncelleme:\n\nTarih: {date}\nYazar: {author}\nMesaj: {message}";
+
+                    MessageBox.Show(updateDetails, "Güncelleme Bildirimi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Yeni commit hash'ini dosyaya kaydet
+                    File.WriteAllText(lastUpdateFilePath, latestCommitHash);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Güncelleme kontrol edilirken bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void LoadSettings()
