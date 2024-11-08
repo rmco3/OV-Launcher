@@ -246,7 +246,6 @@ namespace OV_Launcher
             this.label57 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.label55 = new System.Windows.Forms.Label();
@@ -2317,7 +2316,6 @@ namespace OV_Launcher
             this.panel15.Controls.Add(this.label57);
             this.panel15.Controls.Add(this.label46);
             this.panel15.Controls.Add(this.pictureBox15);
-            this.panel15.Controls.Add(this.label23);
             this.panel15.Controls.Add(this.pictureBox7);
             this.panel15.Controls.Add(this.linkLabel7);
             this.panel15.Location = new System.Drawing.Point(0, 0);
@@ -2571,9 +2569,9 @@ namespace OV_Launcher
             // btnShowMessage
             // 
             this.btnShowMessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShowMessage.Location = new System.Drawing.Point(179, 511);
+            this.btnShowMessage.Location = new System.Drawing.Point(179, 506);
             this.btnShowMessage.Name = "btnShowMessage";
-            this.btnShowMessage.Size = new System.Drawing.Size(144, 22);
+            this.btnShowMessage.Size = new System.Drawing.Size(144, 27);
             this.btnShowMessage.TabIndex = 44;
             this.btnShowMessage.Text = "MIT License";
             this.btnShowMessage.UseVisualStyleBackColor = true;
@@ -2593,7 +2591,7 @@ namespace OV_Launcher
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label46.Location = new System.Drawing.Point(29, 459);
+            this.label46.Location = new System.Drawing.Point(35, 472);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(431, 18);
             this.label46.TabIndex = 40;
@@ -2608,16 +2606,6 @@ namespace OV_Launcher
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 48;
             this.pictureBox15.TabStop = false;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(114, 477);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(260, 18);
-            this.label23.TabIndex = 38;
-            this.label23.Text = "Tüm hakları saklıdır © 2024 OV Launcher\r\n";
             // 
             // pictureBox7
             // 
@@ -2807,7 +2795,6 @@ namespace OV_Launcher
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
