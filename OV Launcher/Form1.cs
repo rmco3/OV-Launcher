@@ -1560,7 +1560,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
         private void linkLabel12_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // GitHub bağlantısını açmak için
-            string url = "https://github.com/rmco3";
+            string url = "https://github.com/rmco3/OV-Launcher";
 
             // Varsayılan tarayıcıda URL'yi aç
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
