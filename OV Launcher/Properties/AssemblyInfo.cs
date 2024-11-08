@@ -7,11 +7,11 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("OV Launcher")]
-[assembly: AssemblyDescription("Simple game launcher")]
+[assembly: AssemblyDescription("OV Launcher, kullanıcıların favori oyunlarını hızlı ve kolay bir şekilde başlatmalarını sağlayan bir Windows uygulamasıdır. Bu uygulama, oyunların yürütülebilir dosyalarını seçmek, oyun isimlerini özelleştirmek ve oyunların başlatılmasını kolaylaştırmak için tasarlanmıştır. Ayrıca, karanlık ve aydınlık temalar arasında geçiş yapabilme, otomatik başlatma ayarları yapabilme ve oyunların resimlerini değiştirebilme gibi ekstra özellikler de sunar.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Rar Uygulamaları")]
+[assembly: AssemblyCompany("rmco3")]
 [assembly: AssemblyProduct("OV Launcher")]
-[assembly: AssemblyCopyright("Tüm hakları saklıdır © 2024 OV Launcher")]
+[assembly: AssemblyCopyright("Copyright © 2024 rmco3")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
