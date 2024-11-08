@@ -1,11 +1,11 @@
 ﻿using Microsoft.Win32;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Windows.Forms;
-using Newtonsoft.Json.Linq;
 using System.Net.Http;
+using System.Windows.Forms;
 
 namespace OV_Launcher
 {
@@ -1608,7 +1608,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
             // Varsayılan tarayıcıda URL'yi aç
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
-
 
         private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
