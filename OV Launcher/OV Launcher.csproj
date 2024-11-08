@@ -136,6 +136,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="bin\Release\MimeKit.dll.config" />
+    <None Include="bin\Release\OV Launcher.application" />
+    <None Include="bin\Release\OV Launcher.exe.config" />
+    <None Include="bin\Release\OV Launcher.exe.manifest" />
+    <None Include="bin\Release\OV Launcher.vshost.application" />
+    <None Include="bin\Release\OV Launcher.vshost.exe.config" />
+    <None Include="bin\Release\OV Launcher.vshost.exe.manifest" />
     <None Include="OV Launcher_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -176,6 +183,32 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Release\app.publish\OV Launcher.exe" />
+    <Content Include="bin\Release\BouncyCastle.Cryptography.dll" />
+    <Content Include="bin\Release\BouncyCastle.Cryptography.xml" />
+    <Content Include="bin\Release\lastUpdate.txt" />
+    <Content Include="bin\Release\MimeKit.dll" />
+    <Content Include="bin\Release\MimeKit.pdb" />
+    <Content Include="bin\Release\MimeKit.xml" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\OV Launcher.exe" />
+    <Content Include="bin\Release\OV Launcher.pdb" />
+    <Content Include="bin\Release\OV Launcher.vshost.exe" />
+    <Content Include="bin\Release\System.Buffers.dll" />
+    <Content Include="bin\Release\System.Buffers.xml" />
+    <Content Include="bin\Release\System.Formats.Asn1.dll" />
+    <Content Include="bin\Release\System.Formats.Asn1.xml" />
+    <Content Include="bin\Release\System.Memory.dll" />
+    <Content Include="bin\Release\System.Memory.xml" />
+    <Content Include="bin\Release\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Release\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Release\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Release\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Release\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Release\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Release\System.ValueTuple.dll" />
+    <Content Include="bin\Release\System.ValueTuple.xml" />
     <Content Include="bv-logo-letter-monogram-slash-with-modern-logo-designs-template-vector-4222558324.ico" />
     <Content Include="OV Launcher logo.ico" />
     <Content Include="th-3457613026.ico" />
