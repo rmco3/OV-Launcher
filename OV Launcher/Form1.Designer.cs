@@ -249,6 +249,7 @@ namespace OV_Launcher
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.label55 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2302,6 +2303,7 @@ namespace OV_Launcher
             // panel15
             // 
             this.panel15.AutoScroll = true;
+            this.panel15.Controls.Add(this.label23);
             this.panel15.Controls.Add(this.label37);
             this.panel15.Controls.Add(this.richTextBox1);
             this.panel15.Controls.Add(this.linkLabel15);
@@ -2592,7 +2594,7 @@ namespace OV_Launcher
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label46.Location = new System.Drawing.Point(35, 472);
+            this.label46.Location = new System.Drawing.Point(29, 459);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(431, 18);
             this.label46.TabIndex = 40;
@@ -2633,6 +2635,16 @@ namespace OV_Launcher
             this.label55.Size = new System.Drawing.Size(377, 13);
             this.label55.TabIndex = 64;
             this.label55.Text = "Bu uygulamaya katkıda bulunduysanız, adınızı burada belirtmekten çekinmeyin.";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Location = new System.Drawing.Point(113, 477);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(275, 18);
+            this.label23.TabIndex = 64;
+            this.label23.Text = "Bu proje MIT lisansı altında lisanslanmıştır. ";
             // 
             // Form1
             // 
@@ -2998,6 +3010,7 @@ namespace OV_Launcher
         private LinkLabel linkLabel12;
         private Label label37;
         private Label label55;
+        private Label label23;
     }
 }
 
