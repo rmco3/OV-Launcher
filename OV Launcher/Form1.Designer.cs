@@ -2568,6 +2568,7 @@ namespace OV_Launcher
             // 
             // btnShowMessage
             // 
+            this.btnShowMessage.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnShowMessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnShowMessage.Location = new System.Drawing.Point(179, 506);
             this.btnShowMessage.Name = "btnShowMessage";
