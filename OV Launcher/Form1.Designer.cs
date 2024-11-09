@@ -156,6 +156,9 @@ namespace OV_Launcher
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label61 = new System.Windows.Forms.Label();
             this.btnResetToDefaults = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -250,9 +253,7 @@ namespace OV_Launcher
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label61 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -305,6 +306,7 @@ namespace OV_Launcher
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.groupBox23.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -327,7 +329,6 @@ namespace OV_Launcher
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.groupBox23.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage
@@ -1658,6 +1659,7 @@ namespace OV_Launcher
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.radioButton3);
             this.tabPage2.Controls.Add(this.groupBox23);
             this.tabPage2.Controls.Add(this.btnResetToDefaults);
             this.tabPage2.Controls.Add(this.groupBox10);
@@ -1668,6 +1670,36 @@ namespace OV_Launcher
             this.tabPage2.Size = new System.Drawing.Size(511, 387);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ayarlar";
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.checkBox2);
+            this.groupBox23.Controls.Add(this.label61);
+            this.groupBox23.Location = new System.Drawing.Point(7, 137);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(183, 40);
+            this.groupBox23.TabIndex = 3;
+            this.groupBox23.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(9, 19);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(169, 17);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "Güncelleme bildirimlerini göster";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(6, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(63, 13);
+            this.label61.TabIndex = 1;
+            this.label61.Text = "Güncelleme";
             // 
             // btnResetToDefaults
             // 
@@ -2653,35 +2685,16 @@ namespace OV_Launcher
             this.linkLabel7.Size = new System.Drawing.Size(100, 23);
             this.linkLabel7.TabIndex = 59;
             // 
-            // groupBox23
+            // radioButton3
             // 
-            this.groupBox23.Controls.Add(this.checkBox2);
-            this.groupBox23.Controls.Add(this.label61);
-            this.groupBox23.Location = new System.Drawing.Point(7, 137);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(183, 40);
-            this.groupBox23.TabIndex = 3;
-            this.groupBox23.TabStop = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(9, 19);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(169, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Güncelleme bildirimlerini göster";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(6, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(63, 13);
-            this.label61.TabIndex = 1;
-            this.label61.Text = "Güncelleme";
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(152, 241);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.TabIndex = 4;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -2783,6 +2796,9 @@ namespace OV_Launcher
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -2823,8 +2839,6 @@ namespace OV_Launcher
             this.panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3053,6 +3067,7 @@ namespace OV_Launcher
         private GroupBox groupBox23;
         private CheckBox checkBox2;
         private Label label61;
+        private RadioButton radioButton3;
     }
 }
 
