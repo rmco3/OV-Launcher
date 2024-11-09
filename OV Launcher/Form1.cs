@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OV_Launcher
@@ -60,11 +59,14 @@ namespace OV_Launcher
         // Diğer ayarlar
         private bool manualChange = false;
 
+        private static readonly string lastUpdateFilePath = "lastUpdate.txt";
+        private static readonly string repoUrl = "https://api.github.com/repos/rmco3/OV-Launcher/commits";
         private bool showUpdateNotifications = true;
 
         public Form1()
         {
             InitializeComponent();
+            CheckForUpdates();
 
             Form1_Load(this, EventArgs.Empty); // Form yüklendiğinde Form1_Load metodu çağrılacak
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -113,152 +115,38 @@ namespace OV_Launcher
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        private async Task CheckForUpdates(bool silent)
-        {
-            string repoUrl = "https://api.github.com/repos/rmco3/OV-Launcher/contents/OV%20Launcher/bin/Release";
-            string localPath = AppDomain.CurrentDomain.BaseDirectory;
-            string exeName = "OV Launcher.exe";
-
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    client.DefaultRequestHeaders.UserAgent.ParseAdd("request");
-                    var response = await client.GetAsync(repoUrl);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var content = await response.Content.ReadAsStringAsync();
-                        JArray files = JArray.Parse(content);
-
-                        bool updateAvailable = await CheckIfUpdateAvailable(files, localPath);
-
-                        if (updateAvailable)
-                        {
-                            if (silent)
-                            {
-                                MessageBox.Show("Yeni bir güncelleme mevcut! Güncellemek için 'Güncelle' butonunu kullanabilirsiniz.",
-                                    "Güncelleme Mevcut",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                var result = MessageBox.Show("Yeni bir güncelleme mevcut! Şimdi güncellemek ister misiniz?",
-                                    "Güncelleme Mevcut",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question);
-
-                                if (result == DialogResult.Yes)
-                                {
-                                    await UpdateApplicationFiles(client, files, localPath);
-                                    MessageBox.Show("Güncelleme tamamlandı. Uygulama yeniden başlatılacak.",
-                                        "Güncelleme Başarılı",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-
-                                    Process.Start(Path.Combine(localPath, exeName));
-                                    Application.Exit();
-                                }
-                            }
-                        }
-                        else if (!silent)
-                        {
-                            MessageBox.Show("Şu anda yeni bir güncelleme bulunmuyor.",
-                                "Güncelleme Kontrolü",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                        }
-                    }
-                    else if (!silent)
-                    {
-                        MessageBox.Show("Güncelleme bilgilerini alamadı.",
-                            "Hata",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    if (!silent)
-                    {
-                        MessageBox.Show("Hata oluştu: " + ex.Message,
-                            "Hata",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                }
-            }
-        }
-
-        private async Task<bool> CheckIfUpdateAvailable(JArray files, string localPath)
+        private async void CheckForUpdates()
         {
             try
             {
-                string currentExePath = Path.Combine(localPath, "OV Launcher.exe");
-                Version currentVersion = new Version(FileVersionInfo.GetVersionInfo(currentExePath).FileVersion);
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("User-Agent", "OV Launcher");
 
-                foreach (var file in files)
+                string responseBody = await client.GetStringAsync(repoUrl);
+                JArray commits = JArray.Parse(responseBody);
+
+                string latestCommitHash = commits[0]["sha"].ToString();
+
+                string previousCommitHash = File.Exists(lastUpdateFilePath) ? File.ReadAllText(lastUpdateFilePath) : string.Empty;
+
+                if (latestCommitHash != previousCommitHash && showUpdateNotifications)
                 {
-                    string fileName = (string)file["name"];
-                    if (fileName == "OV Launcher.exe")
-                    {
-                        using (HttpClient tempClient = new HttpClient())
-                        {
-                            string downloadUrl = (string)file["download_url"];
-                            string tempPath = Path.Combine(Path.GetTempPath(), "temp_" + fileName);
+                    // En yeni commit bilgilerini al ve kullanıcıya göster
+                    string message = commits[0]["commit"]["message"].ToString();
+                    string author = commits[0]["commit"]["author"]["name"].ToString();
+                    string date = commits[0]["commit"]["author"]["date"].ToString();
 
-                            var response = await tempClient.GetAsync(downloadUrl);
-                            if (response.IsSuccessStatusCode)
-                            {
-                                byte[] fileBytes = await response.Content.ReadAsByteArrayAsync();
-                                File.WriteAllBytes(tempPath, fileBytes);
+                    string updateDetails = $"Yeni Güncelleme:\n\nTarih: {date}\nYazar: {author}\nMesaj: {message}";
 
-                                Version onlineVersion = new Version(FileVersionInfo.GetVersionInfo(tempPath).FileVersion);
+                    MessageBox.Show(updateDetails, "Güncelleme Bildirimi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                try { File.Delete(tempPath); } catch { }
-
-                                return onlineVersion > currentVersion;
-                            }
-                        }
-                    }
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Versiyon kontrolü sırasında hata oluştu: " + ex.Message,
-                    "Hata",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return false;
-            }
-        }
-
-        private async Task UpdateApplicationFiles(HttpClient client, JArray files, string localPath)
-        {
-            try
-            {
-                foreach (var file in files)
-                {
-                    string downloadUrl = (string)file["download_url"];
-                    string fileName = (string)file["name"];
-                    string localFilePath = Path.Combine(localPath, fileName);
-
-                    var response = await client.GetAsync(downloadUrl);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        byte[] fileBytes = await response.Content.ReadAsByteArrayAsync();
-                        File.WriteAllBytes(localFilePath, fileBytes);
-                    }
+                    // Yeni commit hash'ini dosyaya kaydet
+                    File.WriteAllText(lastUpdateFilePath, latestCommitHash);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Dosyalar güncellenirken hata oluştu: " + ex.Message,
-                    "Hata",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Güncelleme kontrol edilirken bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -387,8 +275,6 @@ namespace OV_Launcher
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _ = CheckForUpdates(true);
-
             // Ayar dosyalarını oku ve varsa label'lere yaz
             if (File.Exists(settingsFilePath1))
             {
@@ -1737,11 +1623,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
             showUpdateNotifications = checkBox2.Checked;
             Properties.Settings.Default.ShowUpdateNotifications = showUpdateNotifications;
             Properties.Settings.Default.Save();
-        }
-
-        private void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            _ = CheckForUpdates(false);
         }
     }
 }
