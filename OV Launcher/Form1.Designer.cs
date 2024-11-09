@@ -253,6 +253,7 @@ namespace OV_Launcher
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1671,11 +1672,12 @@ namespace OV_Launcher
             // 
             // groupBox23
             // 
+            this.groupBox23.Controls.Add(this.BtnUpdate);
             this.groupBox23.Controls.Add(this.checkBox2);
             this.groupBox23.Controls.Add(this.label61);
             this.groupBox23.Location = new System.Drawing.Point(7, 137);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(183, 40);
+            this.groupBox23.Size = new System.Drawing.Size(180, 73);
             this.groupBox23.TabIndex = 3;
             this.groupBox23.TabStop = false;
             // 
@@ -2683,6 +2685,17 @@ namespace OV_Launcher
             this.linkLabel7.Size = new System.Drawing.Size(100, 23);
             this.linkLabel7.TabIndex = 59;
             // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnUpdate.Location = new System.Drawing.Point(9, 42);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(163, 23);
+            this.BtnUpdate.TabIndex = 4;
+            this.BtnUpdate.Text = "Güncellemeleri Kontrol Et";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3053,6 +3066,7 @@ namespace OV_Launcher
         private GroupBox groupBox23;
         private CheckBox checkBox2;
         private Label label61;
+        private Button BtnUpdate;
     }
 }
 

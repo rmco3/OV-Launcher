@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OV Launcher.exe" size="1039752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OV Launcher.exe" size="1044360">
       <assemblyIdentity name="OV Launcher" version="1.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OcrKbVcjPi6fmm1kCZfoNe38PLM1/rrau3IBhnLwidY=</dsig:DigestValue>
+        <dsig:DigestValue>pwjfyTliFudUyjNYjUs4LZs3f6jh5aBEddKrA6Bv0W8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
