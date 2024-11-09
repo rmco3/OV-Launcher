@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MimeKit.dll" size="1198080">
-      <assemblyIdentity name="MimeKit" version="4.7.0.0" publicKeyToken="BEDE1C8A46C66814" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MimeKit.dll" size="1200128">
+      <assemblyIdentity name="MimeKit" version="4.8.0.0" publicKeyToken="BEDE1C8A46C66814" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EPKocrbYrsIWhZb1LiEo4gdzjIxDFHmV/o6GugyyGDY=</dsig:DigestValue>
+        <dsig:DigestValue>6vtX/N78jCbZsg0CPBktBzsvfrz4F8vXsttdSypX4aY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XfJV8j/mcccC6Ki6czNFvxIJ2kFdskZJGhmqfDMnVjc=</dsig:DigestValue>
+        <dsig:DigestValue>Bxt8HJsIjYSECxkhvsAhL+/upxjoQhVKT96R6eszuaM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -192,13 +192,13 @@
       <dsig:DigestValue>2ncx1+2KqzbBiWf4zWv42fp1RZCfwoA4M2NAGt+vT/U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="OV Launcher.exe.config" size="2719">
+  <file name="OV Launcher.exe.config" size="2782">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0GXtdKahsRW845JkfgRNP0fGh004T1FZkddsO+lXQ8o=</dsig:DigestValue>
+      <dsig:DigestValue>+d0I7x2C9XhAZeB7gzjyTHB14Zq/3RH8s3FI/Q11jN4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="th-3457613026.ico" size="432254">
