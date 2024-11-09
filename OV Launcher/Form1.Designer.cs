@@ -253,7 +253,6 @@ namespace OV_Launcher
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1659,7 +1658,6 @@ namespace OV_Launcher
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage2.Controls.Add(this.radioButton3);
             this.tabPage2.Controls.Add(this.groupBox23);
             this.tabPage2.Controls.Add(this.btnResetToDefaults);
             this.tabPage2.Controls.Add(this.groupBox10);
@@ -2685,17 +2683,6 @@ namespace OV_Launcher
             this.linkLabel7.Size = new System.Drawing.Size(100, 23);
             this.linkLabel7.TabIndex = 59;
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(162, 228);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2796,7 +2783,6 @@ namespace OV_Launcher
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.groupBox23.ResumeLayout(false);
             this.groupBox23.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -3067,7 +3053,6 @@ namespace OV_Launcher
         private GroupBox groupBox23;
         private CheckBox checkBox2;
         private Label label61;
-        private RadioButton radioButton3;
     }
 }
 
