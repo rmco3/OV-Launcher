@@ -2576,7 +2576,7 @@ namespace OV_Launcher
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(113, 26);
             this.label25.TabIndex = 46;
-            this.label25.Text = "Version: 1.4";
+            this.label25.Text = "Version: 1.5";
             // 
             // label56
             // 
@@ -2688,7 +2688,7 @@ namespace OV_Launcher
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(152, 241);
+            this.radioButton3.Location = new System.Drawing.Point(162, 228);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(85, 17);
             this.radioButton3.TabIndex = 4;
@@ -2705,7 +2705,7 @@ namespace OV_Launcher
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "OV Launcher 1.4";
+            this.Text = "OV Launcher 1.5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage.ResumeLayout(false);
