@@ -157,6 +157,7 @@ namespace OV_Launcher
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label61 = new System.Windows.Forms.Label();
             this.btnResetToDefaults = new System.Windows.Forms.Button();
@@ -253,7 +254,7 @@ namespace OV_Launcher
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1659,6 +1660,7 @@ namespace OV_Launcher
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.checkBox3);
             this.tabPage2.Controls.Add(this.groupBox23);
             this.tabPage2.Controls.Add(this.btnResetToDefaults);
             this.tabPage2.Controls.Add(this.groupBox10);
@@ -1680,6 +1682,17 @@ namespace OV_Launcher
             this.groupBox23.Size = new System.Drawing.Size(180, 73);
             this.groupBox23.TabIndex = 3;
             this.groupBox23.TabStop = false;
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnUpdate.Location = new System.Drawing.Point(9, 42);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(163, 23);
+            this.BtnUpdate.TabIndex = 4;
+            this.BtnUpdate.Text = "Güncellemeleri Kontrol Et";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // checkBox2
             // 
@@ -2685,16 +2698,15 @@ namespace OV_Launcher
             this.linkLabel7.Size = new System.Drawing.Size(100, 23);
             this.linkLabel7.TabIndex = 59;
             // 
-            // BtnUpdate
+            // checkBox3
             // 
-            this.BtnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnUpdate.Location = new System.Drawing.Point(9, 42);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(163, 23);
-            this.BtnUpdate.TabIndex = 4;
-            this.BtnUpdate.Text = "Güncellemeleri Kontrol Et";
-            this.BtnUpdate.UseVisualStyleBackColor = true;
-            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(118, 275);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -2796,6 +2808,7 @@ namespace OV_Launcher
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox23.ResumeLayout(false);
             this.groupBox23.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -3067,6 +3080,7 @@ namespace OV_Launcher
         private CheckBox checkBox2;
         private Label label61;
         private Button BtnUpdate;
+        private CheckBox checkBox3;
     }
 }
 
